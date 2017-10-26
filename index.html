@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">		
+  <title>Votre besoin en communication</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css" media="screen"/>	
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="script/jquery.stellar.min.js"></script>
+</head>
+
+<body>
+
+  <div class="chargement"></div>
+
+  <div class="background_parallax" data-stellar-background-ratio="0.3">
+
+    <div id="accroche">VOUS AVEZ BESOIN D'UNE COMMUNICATION VISUELLE</div>
+
+    <div id="triangle1">
+      <img src="img/triangle_gauche.png">
+      <a href="#" id ="onglet_print_textes" data-stellar-ratio="0.6" data-stellar-vertical-offset="0">
+        <div id="onglet_print_titre">PRINT</div>
+        <div id="onglet_print_commande">> PASSER COMMANDE <</div>
+      </a>
+    </div>
+
+    <div id="triangle2">
+      <img src="img/triangle_droite.png">
+      <a href="#" id="onglet_digital_textes" data-stellar-ratio="1.5" data-stellar-vertical-offset="0">
+        <div id="onglet_digital_titre">DIGITAL</div>
+        <div id="onglet_digital_commande">> PASSER COMMANDE <</div>
+      </a>
+    </div>
+
+    <div id="losange">
+      <div id="image_losange"><img src="img/losange.png"></div>
+      <img src="img/picto_imprimante_blanc.png" alt="" id="losange_picto_imprimante">
+      <div id="texte_losange">Uditemoluptam faciendi volupta nobit
+        <br>volum la suntiume quas ex explias itenis velicide
+        <br>nonsedit Lit omnima duntis eossitas aut nimus
+        <br>sam aut doluptatio eatius autem  eserum quat.
+        <br>Me dis re pra id quidunt sam aut doluptatiosam aut dolrest 
+        <br>peris unt pos entiuri stiisquo cor a conem faccupta pre perrum
+        <br>quo magnimi, optur atum sandit, sam aut doluptatio. Aximi, tendae
+        <br>eos re odia que niscimus as dis mod qui alitas alisto velitatur,
+        <br>sa porio to eatusci liquunt aliquae pel mi, ipsumendit ped
+        <br>uptam faciendi volupta nobit psumendit ped
+        <br>volum la suntiume quas ex explias itenis velicide
+        <br>nonsedit Lit omnima duntis eossitas aut nimus
+        <br>sam aut doluptatio eatius autem  
+      </div>
+      <img src="img/picto_ecran_blanc.png" alt="" id="losange_picto_ecran">
+    </div>
+
+
+    <!-- FORMULAIRE -->
+    <a href="#" id="link_print">> Document PRINT</a>
+    <a href="#" id="link_digital">> Document DIGITAL</a>
+
+    <form method="post" action="commande.php" class="formulaire formulaire_print">
+      <h1>De quoi avez-vous besoin ?</h1>
+      <fieldset>
+        <legend> Vos coordonnées </legend>
+        <label for="nom">Votre nom </label><input type="text" name="name" id="nom" required/>
+        <label for="prenom">Votre prénom </label><input type="text" name="firstname" id="prenom" required/>
+        <label for="adresse">Votre adresse e-mail </label><input type="email" name="email" id="adresse" required/>
+      </fieldset>
+      <fieldset>
+        <legend> Votre commande </legend>
+        <p id="formulaire_accroche">Veuillez fournir les informations nécessaires à la création de votre document print :</p>
+        <div>
+          <p>Type de document :</p>
+          <input type="radio" name="type_doc" value="brochure" id="type_brochure" required/><label for="type_brochure">Brochure</label>
+          <input type="radio" name="type_doc" value="affiche" id="type_affiche" required/><label for="type_affiche">Affiche</label>
+          <input type="radio" name="type_doc" value="carte" id="type_carte" required/><label for="type_carte">Carte</label>
+          <input type="radio" name="type_doc" value="autre" id="type_autre" required/><label for="type_autre">Autre</label>
+        </div>
+        <div id="bloc_autre_doc">
+          <label for="precisions">Si "Autre", veuillez préciser : </label><textarea name="precisions" id="precisions_autre" cols="40" rows="3"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend> Validez votre commande </legend>
+        <label for="validation"></label><input type="submit" name="validation" id="valider" value="Commander"/>
+      </fieldset>
+    </form>
+
+    <form method="post" action="commande.php" class="formulaire formulaire_digital">
+      <h1>De quoi avez-vous besoin ?</h1>
+      <fieldset>
+        <legend> Vos coordonnées </legend>
+        <label for="nom">Votre nom </label><input type="text" name="name" id="nom" required/>
+        <label for="prenom">Votre prénom </label><input type="text" name="firstname" id="prenom" required/>
+        <label for="adresse">Votre adresse e-mail </label><input type="email" name="email" id="adresse" required/>
+      </fieldset>
+      <fieldset>
+        <legend> Votre commande </legend>
+        <p id="formulaire_accroche">Veuillez fournir les informations nécessaires à la création de votre document digital :</p>
+        <div>
+          <p>Type de document :</p>
+          <input type="radio" name="type_doc" value="brochure" id="type_brochure" required/><label for="type_brochure">Brochure</label>
+          <input type="radio" name="type_doc" value="affiche" id="type_affiche" required/><label for="type_affiche">Affiche</label>
+          <input type="radio" name="type_doc" value="carte" id="type_carte" required/><label for="type_carte">Carte</label>
+          <input type="radio" name="type_doc" value="autre" id="type_autre" required/><label for="type_autre">Autre</label>
+        </div>
+        <div id="bloc_autre_doc">
+          <label for="precisions">Si "Autre", veuillez préciser : </label><textarea name="precisions" id="precisions_autre" cols="40" rows="3"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend> Validez votre commande </legend>
+        <label for="validation"></label><input type="submit" name="validation" id="valider" value="Commander"/>
+      </fieldset>
+    </form>
+
+    <div id="intro_services">
+      <div id="intro_service_print" class="animation-element slide-left">
+        <h1>PRINT</h1>
+        <!-- <img src="img/picto_fleche.png" alt=""> -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <div id="intro_service_digital" class="animation-element slide-right">
+        <h1>DIGITAL</h1>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+
+    <div id="intro_pictoDeco">
+      <img src="img/pad.png" alt="" id="pictoDeco_pad" class="animation-element slide-left">
+      <img src="img/mobile.png" alt="" id="pictoDeco_mobile" class="animation-element slide-bottom">
+      <img src="img/laptop.png" alt="" id= "pictoDeco_laptop" class="animation-element slide-bottom">
+    </div>
+
+    <div class="footer">
+      <div id="coordonnees_service">
+        <p id="adresse_service">313 Terrasses de l'Arche T3 2A<br>92727 Nanterre Cedex, France</p>
+        <p id="nom_service">Agence Graphique Intégrée</p>
+        <p id="nom_direction">AXA France Supports<br>Direction des Supports Commerciaux</p>
+      </div>
+      <img src="img/logo_axa.png">
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="script/mainscript.js"></script>
+
+</body>
+
+</html>
